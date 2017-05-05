@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <title>Cat Life</title>
@@ -6,7 +6,8 @@
   <meta charset="utf-8">
   <style type="text/css">
     body {
-      background-image: url("gradient-background.jpg");
+      background: repeating-radial-gradient(yellow, blue, brown 25%);
+      /*background-image: url("../images/gradient-background.jpg");*/
     }
 
     img { max-width: 100%; }
@@ -20,11 +21,18 @@
       justify-content: space-around;
     }
 
-    .photo-frame {
-      /* equivalent to 49.5% of total browser width,
+      .photo-frame {
+          /* equivalent to 49.5% of total browser width,
       to make calculating srcset easier for us :) */
-      width: 55%;
-    }
+          width: 55%;
+      }
+      header {
+                 background-color: aqua;
+                 background-image: url("../images/space-header.jpg");
+                 background-repeat: no-repeat;
+                 background-size:cover;
+                 padding: .1rem;
+              }
   </style>
 </head>
 
@@ -47,18 +55,23 @@
 
     <div class="photo-container">
       <div class="photo-frame">
-        <img srcset="yeah.jpg 1280w, yeah-800w.jpg 800w, yeah-400w.jpg 400w"
+        <img srcset="../images/yeah.jpg 1280w, ../images/yeah-800w.jpg 800w, ../images/yeah-400w.jpg 400w"
               sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
-              src="yeah-800w.jpg"
+              src="../images/yeah-800w.jpg"
               alt="really cool cat yelling 'yeah!'">
       </div>
 
       <div class="photo-frame">
-        <img src="dragon.jpg" alt="a fire-breathing cat">
+          
+        <img  srcset="../images/dragon.jpg 1280w, ../images/dragon-800w.jpg 800w, ../images/dragon-400w.jpg 400w"
+             sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+             src="../images/dragon.jpg" alt="a fire-breathing cat">
       </div>
 
       <div class="photo-frame">
-        <img src="grr.jpg" alt="a cat making a weird face">
+        <img srcset="../images/grr.jpg 1280w, ../images/grr-800w.jpg 800w, ../images/grr-400w.jpg 400w"
+             sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+             src="../images/grr.jpg" alt="a cat making a weird face">
       </div>
     </div>
   </section>
